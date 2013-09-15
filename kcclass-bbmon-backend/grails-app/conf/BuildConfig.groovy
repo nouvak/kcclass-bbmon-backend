@@ -36,12 +36,14 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+		mavenRepo "http://maven.springframework.org/milestone/"
     }
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         runtime 'mysql:mysql-connector-java:5.1.22'
+		compile "org.cloudfoundry:cloudfoundry-runtime:0.8.4"
     }
 
     plugins {
@@ -61,5 +63,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
 		
 		runtime ':db-reverse-engineer:0.5'
+		
+		compile ':cloud-foundry:1.2.3'
     }
 }

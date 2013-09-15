@@ -33,7 +33,12 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+			url = 'jdbc:mysql://localhost/xymon_data'
+			driverClassName = 'com.mysql.jdbc.Driver'
+			username = 'kcclass'
+			password = 'KCClass'
+			dialect = org.hibernate.dialect.MySQL5InnoDBDialect
             pooled = true
             properties {
                maxActive = -1
